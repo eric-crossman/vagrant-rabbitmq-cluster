@@ -9,7 +9,7 @@ Vagrant.configure("2") do |config|
   end
 
   config.vm.define "rabbit-3" do |rabbit3|
-    rabbit3.vm.box "centos/7"
+    rabbit3.vm.box = "centos/7"
   end
 
 end
