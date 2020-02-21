@@ -9,6 +9,8 @@ Vagrant.configure("2") do |config|
     end
     config.vm.provision "shell", path: "./puppet_bootstrap.sh"
 
+    config.vm.provision "shell", path: "./install_erlang.sh"
+
     config.vm.provision "puppet" do |puppet|
       puppet.manifests_path = "puppet/manifests"
       puppet.manifest_file = "site.pp"
