@@ -1,0 +1,20 @@
+FORGE
+  remote: https://forgeapi.puppetlabs.com
+  specs:
+    camptocamp-systemd (2.8.0)
+      puppetlabs-inifile (< 5.0.0, >= 1.6.0)
+      puppetlabs-stdlib (< 7.0.0, >= 4.13.1)
+    puppet-archive (4.4.0)
+      puppetlabs-stdlib (< 7.0.0, >= 4.18.0)
+    puppet-rabbitmq (10.0.0)
+      camptocamp-systemd (< 3.0.0, >= 2.1.0)
+      puppet-archive (< 5.0.0, >= 2.0.0)
+      puppetlabs-stdlib (< 7.0.0, >= 4.13.1)
+    puppetlabs-inifile (4.1.0)
+      puppetlabs-translate (< 3.0.0, >= 1.0.0)
+    puppetlabs-stdlib (6.2.0)
+    puppetlabs-translate (2.1.0)
+
+DEPENDENCIES
+  puppet-rabbitmq (= 10.0.0)
+
