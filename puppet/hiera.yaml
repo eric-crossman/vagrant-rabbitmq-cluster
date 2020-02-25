@@ -1,0 +1,15 @@
+---
+:backends:
+  - yaml
+  - eyaml
+:yaml:
+  :datadir: "/vagrant/puppet/data"
+:eyaml:
+  :datadir: "/vagrant/puppet/data"
+  :pkcs7_private_key: /eyaml/eyaml_private_key.pem
+  :pkcs7_public_key: /eyaml/eyaml_public_key.pem
+:hierarchy:
+  - "nodes/%{fqdn}"
+  - "secrets/%{fqdn}"
+  - common
+:logger: console
