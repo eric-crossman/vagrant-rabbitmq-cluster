@@ -1,0 +1,5 @@
+rabbitmq::config_cluster: true
+rabbitmq::cluster_nodes: ['rabbit-1.local', 'rabbit-2.local', 'rabbit-3.local']
+rabbitmq::cluster_node_type: 'disk'
+rabbitmq::repos_ensure: true
+rabbitmq::wipe_db_on_cookie_change: true
