@@ -1,9 +1,12 @@
 Vagrant.configure("2") do |config|
+  config.hostmanager.enabled = true
+  config.hostmanager.manage_guest = true
 
   config.vm.define "rabbit-1" do |rabbit1|
+    rabbit1.hostmanager.aliases = 'rabbit-1'
     rabbit1.vm.box = "bento/centos-7.7"
     rabbit1.vm.hostname = "rabbit-1.local"
-    rabbit1.vm.network "private_network", type: "dhcp"
+    rabbit1.vm.network "private_network", ip: '172.28.128.10'
     rabbit1.vm.synced_folder "/home/eric/Eyaml", "/eyaml"
     config.vm.provider "virtualbox" do |v|
       v.memory = 512
