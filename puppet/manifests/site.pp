@@ -3,13 +3,9 @@ node 'rabbit-1.local' {
 }
 
 node 'rabbit-2.local' {
-  class { 'rabbitmq':
-    repos_ensure  => true,
-  }
+  include rabbitmq
 }
 
 node 'rabbit-3.local' {
-  class { 'rabbitmq':
-    repos_ensure  => true,
-  }
+  include rabbitmq
 }
