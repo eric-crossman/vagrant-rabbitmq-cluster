@@ -26,9 +26,10 @@ Vagrant.configure("2") do |config|
   end
 
   config.vm.define "rabbit-2" do |rabbit2|
+    rabbit2.hostmanager.aliases = 'rabbit-2'
     rabbit2.vm.box = "bento/centos-7.7"
     rabbit2.vm.hostname = "rabbit-2.local"
-    rabbit2.vm.network "private_network", type: "dhcp"
+    rabbit2.vm.network "private_network", ip: '172.28.128.11'
     rabbit2.vm.synced_folder "/home/eric/Eyaml", "/eyaml"
     config.vm.provider "virtualbox" do |v|
       v.memory = 512
@@ -48,9 +49,10 @@ Vagrant.configure("2") do |config|
   end
 
   config.vm.define "rabbit-3" do |rabbit3|
+    rabbit3.hostmanager.aliases = 'rabbit-3'
     rabbit3.vm.box = "bento/centos-7.7"
     rabbit3.vm.hostname = "rabbit-3.local"
-    rabbit3.vm.network "private_network", type: "dhcp"
+    rabbit3.vm.network "private_network", ip: '172.28.128.12'
     rabbit3.vm.synced_folder "/home/eric/Eyaml", "/eyaml"
     config.vm.provider "virtualbox" do |v|
       v.memory = 512
