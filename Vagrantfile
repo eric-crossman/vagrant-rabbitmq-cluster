@@ -12,6 +12,9 @@ Vagrant.configure("2") do |config|
       v.memory = 512
       v.cpus =1
     end
+
+    config.vm.provision :hostmanager
+
     config.vm.provision "shell", path: "./puppet_bootstrap.sh"
 
     config.vm.provision "shell", path: "./install_erlang.sh"
@@ -35,6 +38,9 @@ Vagrant.configure("2") do |config|
       v.memory = 512
       v.cpus =1
     end
+
+    config.vm.provision :hostmanager
+
     config.vm.provision "shell", path: "./puppet_bootstrap.sh"
 
     config.vm.provision "shell", path: "./install_erlang.sh"
@@ -58,6 +64,9 @@ Vagrant.configure("2") do |config|
       v.memory = 512
       v.cpus =1
     end
+
+    config.vm.provision :hostmanager
+    
     config.vm.provision "shell", path: "./puppet_bootstrap.sh"
 
     config.vm.provision "shell", path: "./install_erlang.sh"
