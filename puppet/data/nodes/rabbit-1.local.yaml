@@ -1,5 +1,5 @@
 rabbitmq::config_cluster: true
-rabbitmq::cluster_nodes: ['rabbit-1', 'rabbit-2', 'rabbit-3']
+rabbitmq::cluster_nodes: ['rabbit-1']
 rabbitmq::cluster_node_type: 'disk'
 rabbitmq::repos_ensure: true
 rabbitmq::wipe_db_on_cookie_change: true
