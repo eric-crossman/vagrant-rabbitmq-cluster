@@ -123,5 +123,5 @@ Verify queue settings:
 `exit`
 
 ## Example Failure Scenarios
-* [Failure 1 - Graceful VM Shutdown] (https://github.com/eric-crossman/vagrant-rabbitmq-cluster/doc/FAIL-001.md)
-* [Failure 2 - Immediate VM Shutdown] (https://github.com/eric-crossman/vagrant-rabbitmq-cluster/doc/FAIL-002.md)
+* [Failure 1 - Graceful VM Shutdown](https://github.com/eric-crossman/vagrant-rabbitmq-cluster/doc/FAIL-001.md)
+* [Failure 2 - Immediate VM Shutdown](https://github.com/eric-crossman/vagrant-rabbitmq-cluster/doc/FAIL-002.md)
