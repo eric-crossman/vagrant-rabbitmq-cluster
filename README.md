@@ -101,10 +101,14 @@ management console. Here we will use the CLI:
 From rabbit-1:
 
 `$ vagrant ssh rabbit-1`
+
 `$ wget -O rabbitmqadmin http://localhost:15672/cli/rabbitmqadmin`
+
 `$ chown +x ./rabbitmqadmin`
-`$ ./rabbitmqadmin declare queue name=erc_quorum_queue 'arguments={"x-queue-type":"quorum"}'
-queue declared`
+
+`$ ./rabbitmqadmin declare queue name=erc_quorum_queue 'arguments={"x-queue-type":"quorum"}'`
+
+> queue declared
 
 Verify queue settings:
 
