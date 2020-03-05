@@ -13,6 +13,12 @@ The demo environment provided here is based on Puppet, Vagrant, and VirtualBox.
 The local machine used to run the demo will need to have those components
 already installed and functioning.
 
+## References
+* https://www.rabbitmq.com/management-cli.html
+* https://www.compose.com/articles/configuring-rabbitmq-exchanges-queues-and-bindings-part-2/
+* https://www.rabbitmq.com/clustering.html
+
+
 ## Vagrant Preparation
 The demo environment is also reliant on a vagrant plugin to manage **/etc/hosts**
 for name resolution inside of the guest virtual machines. The plugin can be
@@ -115,3 +121,7 @@ Verify queue settings:
 +-------+-----------------+--------+
 
 `exit`
+
+## Example Failure Scenarios
+* [Failure 1 - Graceful VM Shutdown] (doc/FAIL-001.md)
+* [Failure 2 - Immediate VM Shutdown] (doc/FAIL-002.md)
