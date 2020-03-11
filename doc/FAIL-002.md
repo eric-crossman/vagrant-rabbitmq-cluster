@@ -80,5 +80,7 @@ Cluster status will also show all three nodes as running:
 Running Nodes
 
 rabbit@rabbit-1
+
 rabbit@rabbit-2
+
 rabbit@rabbit-3
