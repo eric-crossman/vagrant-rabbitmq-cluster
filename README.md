@@ -104,7 +104,7 @@ From rabbit-1:
 
 `$ wget -O rabbitmqadmin http://localhost:15672/cli/rabbitmqadmin`
 
-`$ chown +x ./rabbitmqadmin`
+`$ chmod +x ./rabbitmqadmin`
 
 `$ ./rabbitmqadmin declare queue name=erc_quorum_queue 'arguments={"x-queue-type":"quorum"}'`
 
