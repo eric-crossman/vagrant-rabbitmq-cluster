@@ -51,3 +51,34 @@ The surviving nodes will see the heartbeat from rabbit-3 upon startup:
 
 Due to initial puppet config, newly provisioned node will come up as a single node cluster. We will
 now need to re-join the cluster.
+
+Since surviving nodes still believe that rabbit-3 is a cluster member, we must first "forget" the cluster member:
+
+On 'rabbit-1':
+`rabbitmqctl forget_cluster_node rabbit@rabbit-3`
+
+On 'rabbit-3':
+`rabbitmqctl join_cluster rabbit@rabbit-1`
+
+`rabbitmqctl start_app`
+
+Now, check the quorum status of the queue, rabbit-3 should now be established as a 'follower'
+
+Status of quorum queue erc_quorum_queue on node rabbit@rabbit-1 ...
+┌─────────────────┬────────────┬───────────┬──────────────┬────────────────┬──────┬─────────────────┐
+│ Node Name       │ Raft State │ Log Index │ Commit Index │ Snapshot Index │ Term │ Machine Version │
+├─────────────────┼────────────┼───────────┼──────────────┼────────────────┼──────┼─────────────────┤
+│ rabbit@rabbit-3 │ follower   │ 0         │ 0            │ undefined      │ 0    │ 0               │
+├─────────────────┼────────────┼───────────┼──────────────┼────────────────┼──────┼─────────────────┤
+│ rabbit@rabbit-2 │ follower   │ 1         │ 1            │ undefined      │ 1    │ 0               │
+├─────────────────┼────────────┼───────────┼──────────────┼────────────────┼──────┼─────────────────┤
+│ rabbit@rabbit-1 │ leader     │ 1         │ 1            │ undefined      │ 1    │ 0               │
+└─────────────────┴────────────┴───────────┴──────────────┴────────────────┴──────┴─────────────────┘
+
+Cluster status will also show all three nodes as running:
+
+Running Nodes
+
+rabbit@rabbit-1
+rabbit@rabbit-2
+rabbit@rabbit-3
