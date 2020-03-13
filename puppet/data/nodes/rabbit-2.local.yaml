@@ -1,5 +1,6 @@
 rabbitmq::config_cluster: true
 rabbitmq::cluster_nodes: ['rabbit-2']
 rabbitmq::cluster_node_type: 'disk'
+rabbitmq::cluster_partition_handling: 'pause_minority'
 rabbitmq::repos_ensure: true
 rabbitmq::wipe_db_on_cookie_change: true
