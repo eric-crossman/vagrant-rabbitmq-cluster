@@ -56,7 +56,9 @@ rabbit-1 seems to resolve this.
 Running Nodes
 
 rabbit@rabbit-1
+
 rabbit@rabbit-2
+
 rabbit@rabbit-3
 
 Quorum Status:
