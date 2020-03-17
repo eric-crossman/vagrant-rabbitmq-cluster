@@ -129,4 +129,4 @@ Verify queue settings:
 ## Example Failure Scenarios
 * [Failure 1 - Graceful VM Shutdown](doc/FAIL-001.md)
 * [Failure 2 - Immediate VM Shutdown](doc/FAIL-002.md)
-* [Failure 3 - Immediate VM Shutdown](doc/FAIL-003.md)
+* [Failure 3 - Network Segmentation](doc/FAIL-003.md)
